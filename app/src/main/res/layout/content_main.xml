@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout android:id="@+id/lyBody" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#ff000000"
+        android:layout_marginBottom="0dip">
+        <RelativeLayout android:id="@+id/lyMap" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone">
+            <fragment android:id="@+id/map" android:layout_width="match_parent" android:layout_height="match_parent"
+                    class="com.google.android.gms.maps.SupportMapFragment" />
+
+            <ImageButton android:id="@+id/ibViewMode" android:layout_width="45dip" android:layout_height="45dip"
+                    android:gravity="center" android:contentDescription="@string/app_name"
+                    android:layout_alignParentTop="true" android:layout_marginTop="@dimen/dp10"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dp60"
+                    app:backgroundTint="@color/browser_actions_divider_color"
+                    app:srcCompat="@android:drawable/ic_menu_mapmode"/>
+            <ImageButton android:id="@+id/ibViewFixed" android:layout_width="45dip" android:layout_height="45dip"
+                android:gravity="center" android:contentDescription="@string/app_name"
+                android:layout_alignParentTop="true" android:layout_marginTop="@dimen/dp10"
+                 android:layout_toStartOf="@+id/ibViewMode"
+                app:backgroundTint="@color/browser_actions_divider_color"
+                app:srcCompat="@android:drawable/ic_menu_mylocation"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/lyHud" android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+            <TextView android:id="@+id/tvMaxSpeedTitle" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp" android:layout_marginStart="55dp"
+                      android:text="@string/max_speed" android:textSize="18sp"
+                      android:textColor="#ffffffff" android:layout_alignParentStart="true"
+                      android:gravity="start"/>
+            <TextView android:id="@+id/tvMaxSpeed" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp" android:layout_toEndOf="@+id/tvMaxSpeedTitle"
+                      android:layout_marginStart="10dp" android:textSize="18sp" android:textColor="#ffffffff"/>
+
+            <TextView android:id="@+id/tvAveSpeed" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="60dp" android:layout_marginEnd="20dp" android:layout_marginStart="10dp"
+                      android:layout_alignParentEnd="true" android:textSize="21sp"
+                      android:textColor="#ffffffff"/>
+            <TextView android:id="@+id/tvAveSpeedTitle" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_toStartOf="@+id/tvAveSpeed"
+                      android:layout_marginTop="60dp" android:text="@string/ave_speed" android:textSize="21sp"
+                      android:textColor="#ffffffff" tools:ignore="RelativeOverlap"/>
+
+            <TextView android:id="@+id/tvSpeed" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:layout_marginTop="100dp" android:layout_centerHorizontal="true"
+                      android:textSize="71sp" android:textColor="#ffffffff"/>
+            <TextView android:id="@+id/tvUnit" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:layout_below="@+id/tvSpeed" android:layout_centerHorizontal="true"
+                      android:text="@string/unit_kph" android:textSize="25sp" android:textColor="#ffffffff"/>
+
+            <TextView android:id="@+id/tvMoveLenTitle" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_above="@+id/init" android:layout_marginStart="20dp"
+                      android:layout_marginBottom="40dp" android:text="@string/move_len"
+                      android:textSize="16sp" android:textColor="#ffffffff"/>
+            <TextView android:id="@+id/tvMoveLen" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_above="@+id/init" android:layout_toEndOf="@+id/tvMoveLenTitle"
+                      android:layout_marginStart="10dp" android:layout_marginBottom="40dp"
+                      tools:text="33 km/h" android:textSize="16sp" android:textColor="#ffffffff"/>
+            <TextView android:id="@+id/tvMoveTimeTitle" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_above="@+id/init" android:layout_marginStart="20dp"
+                      android:layout_marginBottom="20dp" android:text="@string/move_time"
+                      android:textSize="16sp" android:textColor="#ffffffff"/>
+            <TextView android:id="@+id/tvMoveTime" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_above="@+id/init" android:layout_toEndOf="@+id/tvMoveTimeTitle"
+                      android:layout_marginStart="10dp" android:layout_marginBottom="20dp"
+                      tools:text="00:00" android:textSize="16sp" android:textColor="#ffffffff"/>
+
+            <LinearLayout android:id="@+id/lyCadence" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:layout_above="@+id/init" android:orientation="horizontal" android:layout_toEndOf="@+id/tvMoveTime"
+                          android:layout_marginStart="50dp" android:layout_marginBottom="20dp" android:visibility="gone">
+                <TextView android:id="@+id/tvCadenceTitle" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/cadence" android:textSize="16sp" android:textColor="#ffffffff"/>
+                <TextView android:id="@+id/tvCadence" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" android:layout_marginStart="10dp"
+                          tools:text="35 RPM" android:textSize="16sp" android:textColor="#ffffffff"/>
+            </LinearLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/init"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="bottom|end"
+                                                                android:layout_alignParentBottom="true"
+                                                                android:layout_alignParentStart="true"
+                                                                android:layout_marginStart="@dimen/dp16"
+                                                                android:layout_marginBottom="@dimen/fab_marginBottom"
+                                                                app:backgroundTint="@color/colorAccent"
+                                                                app:srcCompat="@android:drawable/stat_notify_sync"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/save"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="bottom|end"
+                                                                android:layout_alignParentBottom="true"
+                                                                android:layout_toEndOf="@+id/init"
+                                                                android:layout_marginStart="@dimen/dp10"
+                                                                android:layout_marginBottom="@dimen/fab_marginBottom"
+                                                                app:backgroundTint="@color/design_default_color_primary"
+                                                                app:srcCompat="@android:drawable/ic_menu_save"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/play"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="bottom|end"
+                                                                android:layout_alignParentBottom="true"
+                                                                android:layout_toEndOf="@+id/save"
+                                                                android:layout_marginStart="@dimen/dp10"
+                                                                android:layout_marginBottom="@dimen/fab_marginBottom"
+                                                                app:backgroundTint="#ffaaaaaa"
+                                                                app:srcCompat="@android:drawable/ic_media_play"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/fab" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp16" android:layout_marginBottom="@dimen/fab_marginBottom" app:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@android:drawable/ic_dialog_map"/>
+    </RelativeLayout>
+
+     <!--광고 바  오리지널 ID ca-app-pub-5662815491108033/2507532391  테스트 아이디 ca-app-pub-3940256099942544/6300978111 -->
+    <LinearLayout android:id="@+id/lygang"
+                  android:layout_width="match_parent" android:layout_height="50dip" android:orientation="vertical" app:layout_constraintBottom_toBottomOf="parent">
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                                           android:id="@+id/gwangview" android:layout_width="match_parent" android:layout_height="wrap_content" ads:adSize="BANNER"
+                                           ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+                                           android:layout_gravity="center"/>
+        <WebView android:id="@+id/myadview" android:layout_width="match_parent" android:layout_height="50dip" android:visibility="gone"
+        android:layout_marginLeft="50dp" android:layout_marginRight="50dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">바이크 라이프</string>
+    <string name="navigation_drawer_open">네비게이션 열기</string>
+    <string name="navigation_drawer_close">네비게이션 닫기</string>
+    <string name="nav_header_title">사용자 정보</string>
+    <string name="nav_header_subtitle">준비중...</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">환경설정</string>
+    <string name="max_speed">최고속도</string>
+    <string name="ave_speed">평균속도</string>
+    <string name="move_len">이동거리</string>
+    <string name="move_time">이동시간</string>
+    <string name="unknown_loc">알수없는 위치</string>
+    <string name="start_play">주행 시작</string>
+    <string name="stop_play">주행 멈춤</string>
+    <string name="unit_kph">Km/h</string>
+    <string name="yes">예</string>
+    <string name="no">아니오</string>
+    <string name="comming_soon">"준비중 입니다. "</string>
+    <string name="save_history">라이딩경로 저장...</string>
+    <string name="save_history_fail">라이딩경로 저장 실패..</string>
+    <string name="init_msg">저장안된 주행기록이 있습니다. 그래도 초기화 하시겠습니까?</string>
+    <string name="ok">확인</string>
+    <string name="riding_history">라이딩 기록 보기</string>
+    <string name="his_del_msg">삭제하면 더이상 복구가 불가능합니다.주행 기록을 삭제 하시겠습니까?</string>
+    <string name="bluetooth_not_msg">기기가 블루투스를 지원하지 않습니다.</string>
+    <string name="bluetooth_connect_msg">기기에 연결되었습니다.</string>
+    <string name="cancel">취소</string>
+    <string name="device_connection">속도센서 연결 시도</string>
+    <string name="device_cadence">케이던스 및 속도센서 연결</string>
+    <string name="device_connect">속도 센서 연결</string>
+    <string name="bluetooth_selection">디바이스(기기) 선택</string>
+
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="label_data">Data:</string>
+    <string name="label_device_address">Device address:</string>
+    <string name="label_state">State:</string>
+    <string name="no_data">No data</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="title_devices">BLE Device Scan</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+
+    <string name="unknown_device">Unknown device</string>
+    <string name="unknown_characteristic">Unknown characteristic</string>
+    <string name="unknown_service">Unknown service</string>
+
+    <!-- Menu items -->
+    <string name="menu_connect">Connect</string>
+    <string name="menu_disconnect">Disconnect</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+    <string name="cadence">케이던스</string>
+    <string name="wheel_size">휠 크기</string>
+    <string name="bike_Information">자전거 정보</string>
+    <string name="managing">설정 관리</string>
+    <string name="device_not_connect">속도 센서 연결에 실패.</string>
+    <string name="init">초기화</string>
+    <string name="device_disconnect">속도 센서를 해제하고 GPS로 속도를 표시합니다.</string>
+</resources>

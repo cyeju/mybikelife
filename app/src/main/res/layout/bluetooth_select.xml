@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent"
+			  android:background="@color/cardview_light_background"
+			  android:orientation="vertical" tools:ignore="PrivateResource">
+		<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+					  android:orientation="horizontal">
+			<TextView android:id="@+id/tvBluetoothSelectTitle" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dip" android:gravity="center_vertical|center_horizontal"
+					  android:textColor="#FF000000" android:text="@string/bluetooth_selection" android:textSize="18sp" android:textStyle="bold" android:layout_gravity="center" />
+			<Button android:id="@+id/btnRescan"  android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:text="Rescan" android:textSize="16sp"
+					android:layout_gravity="center" tools:ignore="HardcodedText"/>
+		</LinearLayout>
+		<ListView android:id="@+id/lvDeviceList" android:drawSelectorOnTop="false"
+				android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+</LinearLayout>

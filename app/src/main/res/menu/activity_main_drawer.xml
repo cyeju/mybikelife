@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/ridingHistory"
+            android:icon="@drawable/riding_history"
+            android:title="@string/riding_history" />
+    </group>
+
+    <item android:title="@string/managing">
+        <menu>
+            <item android:id="@+id/bikeInformation"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="@string/bike_Information" />
+            <item android:id="@+id/device_cadence"
+                android:icon="@android:drawable/stat_sys_data_bluetooth"
+                android:title="@string/device_cadence" />
+
+        </menu>
+    </item>
+</menu>

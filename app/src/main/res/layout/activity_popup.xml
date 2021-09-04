@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#00eeeeee"
+    android:layout_margin="10dp"
+    android:id="@+id/ly_popup"
+    android:layout_gravity="center_horizontal"
+    tools:context="com.oren.mybikelife.PopupActivity" >
+<!--     <LinearLayout android:id="@+id/ly_popup" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"> -->
+<!--         android:id="@+id/ly_body" -->
+<!--         android:layout_marginLeft="20dp" -->
+<!--         android:layout_marginTop="50dp" -->
+<!-- 		android:layout_marginRight="20dp" -->
+<!-- 	    android:layout_marginBottom="20dp" -->
+<!--         android:orientation="vertical" -->
+<!--         android:background="#00eeeeee"> -->
+<!--         <TextView android:layout_width="match_parent" android:layout_height="wrap_content" -->
+<!--             android:id="@+id/tv_msg" android:textColor="#ff000000" -->
+<!--             android:gravity="center" android:textSize="17dip" -->
+<!--             android:background="@drawable/btn_default_normal"/> -->
+<!-- 		<ListView android:layout_width="match_parent" android:layout_height="wrap_content" -->
+<!-- 			android:id="@+id/listPopup" android:background="#00ffffff" -->
+<!-- 		    android:layout_gravity="center|center_horizontal" -->
+<!-- 	    /> -->
+<!-- 	</LinearLayout> -->
+</FrameLayout>
